@@ -1,0 +1,22 @@
+actor: Tester
+bootstrap: _bootstrap.php
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    helpers: tests/_support
+settings:
+    memory_limit: 1024M
+    colors: true
+modules:
+    config:
+        Yii2:
+            configFile: 'config/test.php'
+
+coverage:
+    c3_url: http://app/index-test.php
+    enabled: true
+    remote: true
+    whitelist:
+        include:
+            - services/*
